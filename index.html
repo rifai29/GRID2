@@ -903,7 +903,6 @@
         <button class="btn btn-red" id="clear-btn">Hapus Semua</button>
         <div class="sep"></div>
         <button class="btn btn-green" id="download-btn">⬇ Unduh PNG</button>
-        <span class="badge" id="count-badge">0/4 foto</span>
         <div class="sep"></div>
         <button class="btn" id="toggle-rasio" title="Tampilkan/sembunyikan pengaturan rasio"><svg viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="2">
@@ -1682,7 +1681,7 @@
                 wrap.appendChild(el);
             });
             const filled = cells.filter((c) => c.img).length;
-            countBadge.textContent = `${filled}/${cells.length} foto`;
+            if (countBadge) countBadge.textContent = `${filled}/${cells.length} foto`;
         }
 
         // ─── CONTEXT MENU ────────────────────────────────────────
